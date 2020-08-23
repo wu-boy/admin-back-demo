@@ -20,11 +20,14 @@
     <packaging>war</packaging>
 
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
 
+        <commons-lang3.version>3.9</commons-lang3.version>
         <druid.version>1.1.21</druid.version>
+        <kaptcha.version>0.0.9</kaptcha.version>
         <mybatis.plus.starter.version>3.3.0</mybatis.plus.starter.version>
-        <postgresql.version>42.2.5</postgresql.version>
         <swagger.version>2.9.2</swagger.version>
     </properties>
 
@@ -50,11 +53,24 @@
                 </exclusion>
             </exclusions>
         </dependency>
-
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${commons-lang3.version}</version>
+        </dependency>
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid-spring-boot-starter</artifactId>
             <version>${druid.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.axet</groupId>
+            <artifactId>kaptcha</artifactId>
+            <version>${kaptcha.version}</version>
         </dependency>
         <dependency>
             <groupId>com.baomidou</groupId>
@@ -62,9 +78,8 @@
             <version>${mybatis.plus.starter.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-            <version>${postgresql.version}</version>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
         </dependency>
         <dependency>
             <groupId>io.springfox</groupId>

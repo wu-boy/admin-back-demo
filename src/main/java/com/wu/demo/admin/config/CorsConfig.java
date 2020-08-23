@@ -1,13 +1,15 @@
 package com.wu.demo.admin.config;
 
+import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 /**
  * 跨域解决方案
  * @author wusq
- * @date 2020/8/5
+ * @date 2020/8/14
  */
+@Configuration
 public class CorsConfig implements WebMvcConfigurer {
 
     @Override

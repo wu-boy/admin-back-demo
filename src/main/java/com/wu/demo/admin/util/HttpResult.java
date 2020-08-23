@@ -1,4 +1,4 @@
-package com.wu.demo.admin.config;
+package com.wu.demo.admin.util;
 
 import java.io.Serializable;
 
