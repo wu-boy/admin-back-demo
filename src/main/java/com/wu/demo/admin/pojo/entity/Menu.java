@@ -1,13 +1,16 @@
 package com.wu.demo.admin.pojo.entity;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 /**
  * 菜单
  * @author wusq
- * @date 2020/8/23
+ * @date 2020/8/25
  */
 @TableName("sys_menu")
 public class Menu {
@@ -35,7 +38,7 @@ public class Menu {
     /**
      * 授权
      */
-    private String permission;
+    private String perms;
 
     /**
      * 类型
@@ -66,6 +69,9 @@ public class Menu {
      * 修改时间
      */
     private Date updateTime;
+
+    @TableField(exist = false)
+    private List<Menu> children = new ArrayList<>();
 
     public String getId() {
         return id;
@@ -99,12 +105,12 @@ public class Menu {
         this.url = url;
     }
 
-    public String getPermission() {
-        return permission;
+    public String getPerms() {
+        return perms;
     }
 
-    public void setPermission(String permission) {
-        this.permission = permission;
+    public void setPerms(String perms) {
+        this.perms = perms;
     }
 
     public String getType() {
@@ -153,5 +159,13 @@ public class Menu {
 
     public void setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
+    }
+
+    public List<Menu> getChildren() {
+        return children;
+    }
+
+    public void setChildren(List<Menu> children) {
+        this.children = children;
     }
 }
