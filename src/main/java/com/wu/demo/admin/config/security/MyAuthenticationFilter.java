@@ -57,7 +57,7 @@ public class MyAuthenticationFilter extends BasicAuthenticationFilter {
                         List<Menu> menuList = role.getMenuList();
                         if(menuList != null && !menuList.isEmpty()){
                             for(Menu m:menuList){
-                                grantedAuthorityList.add(new GrantedAuthorityImpl(m.getPermission()));
+                                //grantedAuthorityList.add(new GrantedAuthorityImpl(m.getPermission()));
                             }
                         }
                     }

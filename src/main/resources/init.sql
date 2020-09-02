@@ -6,6 +6,18 @@ insert into `sys_menu`(`id`,`name`,`parent_id`,`url`,`perms`,`type`,`icon`,`sort
 ('8d096c735ab748a49d47ea69f0f390a1', '用户管理', '54d2021c438a43959dc6f4a6f537f135', '/sys/user', null,
 '1', 'el-icon-service', '1', '0');
 insert into `sys_menu`(`id`,`name`,`parent_id`,`url`,`perms`,`type`,`icon`,`sort`,`del_flag`) values
+('f2a9272962674bcca9fbe3fc8833ae0f', '新增', '8d096c735ab748a49d47ea69f0f390a1', null, 'sys:user:insert',
+'2', null, '0', '0');
+insert into `sys_menu`(`id`,`name`,`parent_id`,`url`,`perms`,`type`,`icon`,`sort`,`del_flag`) values
+('524721d9b45b448197677e181e8c8fdf', '删除', '8d096c735ab748a49d47ea69f0f390a1', null, 'sys:user:delete',
+'2', null, '0', '0');
+insert into `sys_menu`(`id`,`name`,`parent_id`,`url`,`perms`,`type`,`icon`,`sort`,`del_flag`) values
+('4c7f40017cd440f9b169cc101fadf2ee', '修改', '8d096c735ab748a49d47ea69f0f390a1', null, 'sys:user:update',
+'2', null, '0', '0');
+insert into `sys_menu`(`id`,`name`,`parent_id`,`url`,`perms`,`type`,`icon`,`sort`,`del_flag`) values
+('6033f494aeb0485482ebd13fe58a78ce', '查看', '8d096c735ab748a49d47ea69f0f390a1', null, 'sys:user:view',
+'2', null, '0', '0');
+insert into `sys_menu`(`id`,`name`,`parent_id`,`url`,`perms`,`type`,`icon`,`sort`,`del_flag`) values
 ('a0a407c2e2634666a708d6c775c806d1', '机构管理', '54d2021c438a43959dc6f4a6f537f135', '/sys/dept', null,
 '1', 'el-icon-news', '2', '0');
 insert into `sys_menu`(`id`,`name`,`parent_id`,`url`,`perms`,`type`,`icon`,`sort`,`del_flag`) values
@@ -16,10 +28,22 @@ insert into `sys_menu`(`id`,`name`,`parent_id`,`url`,`perms`,`type`,`icon`,`sort
 '1', 'el-icon-menu', '4', '0');
 insert into `sys_menu`(`id`,`name`,`parent_id`,`url`,`perms`,`type`,`icon`,`sort`,`del_flag`) values
 ('6c00dc2ab6aa444dae65c6a2f219f819', '字典管理', '54d2021c438a43959dc6f4a6f537f135', '/sys/dictionary', null,
-'1', 'el-icon-outline', '5', '0');
+'1', 'el-icon-collection', '5', '0');
+insert into `sys_menu`(`id`,`name`,`parent_id`,`url`,`perms`,`type`,`icon`,`sort`,`del_flag`) values
+('6f596f62c5814f64bba02e5f70752b32', '新增', '6c00dc2ab6aa444dae65c6a2f219f819', null, 'sys:dictionary:insert',
+'2', null, '0', '0');
+insert into `sys_menu`(`id`,`name`,`parent_id`,`url`,`perms`,`type`,`icon`,`sort`,`del_flag`) values
+('c3ac3bc1c3794d6a9aab89fc112b38b0', '删除', '6c00dc2ab6aa444dae65c6a2f219f819', null, 'sys:dictionary:delete',
+'2', null, '0', '0');
+insert into `sys_menu`(`id`,`name`,`parent_id`,`url`,`perms`,`type`,`icon`,`sort`,`del_flag`) values
+('e732afdd908e45fa9cd6e2cc58047796', '修改', '6c00dc2ab6aa444dae65c6a2f219f819', null, 'sys:dictionary:update',
+'2', null, '0', '0');
+insert into `sys_menu`(`id`,`name`,`parent_id`,`url`,`perms`,`type`,`icon`,`sort`,`del_flag`) values
+('d2b2356482e54ff79dac6cb8bbecd2c6', '查看', '6c00dc2ab6aa444dae65c6a2f219f819', null, 'sys:dictionary:view',
+'2', null, '0', '0');
 insert into `sys_menu`(`id`,`name`,`parent_id`,`url`,`perms`,`type`,`icon`,`sort`,`del_flag`) values
 ('49a049a05f474f8aa5e489f06a391efc', '系统配置', '54d2021c438a43959dc6f4a6f537f135', '/sys/config', null,
-'1', 'el-icon-outline', '6', '0');
+'1', 'el-icon-orange', '6', '0');
 insert into `sys_menu`(`id`,`name`,`parent_id`,`url`,`perms`,`type`,`icon`,`sort`,`del_flag`) values
 ('ff6c1451303e4fc0bfcc5cc70c48133f', '登录日志', '54d2021c438a43959dc6f4a6f537f135', '/sys/loginlog', null,
 '1', 'el-icon-info', '7', '0');

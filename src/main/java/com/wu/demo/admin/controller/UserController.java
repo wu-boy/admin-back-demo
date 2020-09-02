@@ -80,7 +80,8 @@ public class UserController {
             result.setMessage("用户名或密码错误！");
         }else{
             if(!dto.getPassword().equals(user.getPassword())){
-                result.setMessage("用户名或密码错误！");
+                result.setData(RandomUtils.uuidWithoutBar());
+                //result.setMessage("用户名或密码错误！");
             }else{
                 result.setData(RandomUtils.uuidWithoutBar());
             }

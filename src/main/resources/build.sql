@@ -30,7 +30,7 @@ create table `sys_dictionary`(
 drop table if exists `sys_menu`;
 create table `sys_menu`(
   `id` char(32) comment 'ID',
-  `name` varchar(32) unique not null comment '名称',
+  `name` varchar(32) not null comment '名称',
   `parent_id` char(32) default null comment '父ID',
   `url` varchar(256) default null comment 'URL',
   `perms` varchar(512) default null comment '授权',

@@ -42,6 +42,15 @@ public class RandomUtils {
 
     public static void main(String[] args) {
         System.out.println(uuidWithoutBar());
+        System.out.println(uuidWithoutBar());
+        System.out.println(uuidWithoutBar());
+        System.out.println(uuidWithoutBar());
+        System.out.println(uuidWithoutBar());
+        System.out.println(uuidWithoutBar());
+        System.out.println(uuidWithoutBar());
+        System.out.println(uuidWithoutBar());
+        System.out.println(uuidWithoutBar());
+        System.out.println(uuidWithoutBar());
     }
 
 }

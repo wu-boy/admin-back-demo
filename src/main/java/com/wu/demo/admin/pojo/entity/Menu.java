@@ -43,7 +43,7 @@ public class Menu {
     /**
      * 类型
      */
-    private String type;
+    private Integer type;
 
     /**
      * 图标
@@ -113,11 +113,11 @@ public class Menu {
         this.perms = perms;
     }
 
-    public String getType() {
+    public Integer getType() {
         return type;
     }
 
-    public void setType(String type) {
+    public void setType(Integer type) {
         this.type = type;
     }
 
