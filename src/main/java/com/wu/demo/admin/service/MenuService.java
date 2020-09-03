@@ -26,10 +26,7 @@ public class MenuService {
 
     public List<Menu> listByUsername(String username){
         List<Menu> result = new ArrayList<>();
-        if(StringUtils.isBlank(username)){
-            return result;
-        }
-        if(GlobalConsts.ADMIN.equalsIgnoreCase(username)){
+        if(StringUtils.isBlank(username) || GlobalConsts.ADMIN.equalsIgnoreCase(username)){
             result = list();
         }else{
             result = mapper.listByUsername(username);
@@ -38,15 +35,13 @@ public class MenuService {
     }
 
     /**
-     * 根据用户名查找左侧导航菜单树
-     * @param username
+     * 查询菜单树
+     * @param username 用户名
+     * @param button 是否需要按钮
      * @return
      */
-    public List<Menu> navTree(String username){
+    public List<Menu> tree(String username, Boolean button){
         List<Menu> result = new ArrayList<>();
-        if(StringUtils.isBlank(username)){
-            return result;
-        }
 
         List<Menu> menuList = listByUsername(username);
 
@@ -57,11 +52,14 @@ public class MenuService {
             for(Menu o:menuList){
 
                 // 过滤掉按钮
-                if(MenuTypeEnum.BUTTON.getValue().equals(o.getType())){
-                    continue;
+                if(!button){
+                    if(MenuTypeEnum.BUTTON.getValue().equals(o.getType())){
+                        continue;
+                    }
                 }
 
                 if(m.getId().equals(o.getParentId())){
+                    o.setParentName(m.getName());
                     m.getChildren().add(o);
                 }
             }

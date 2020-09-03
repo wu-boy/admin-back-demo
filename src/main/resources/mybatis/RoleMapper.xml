@@ -1,0 +1,21 @@
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wu.demo.admin.dao.RoleMapper">
+
+    <sql id="whereSql">
+        <where>
+            <if test="name != null and name != ''">
+                name like CONCAT('%',#{name},'%')
+            </if>
+        </where>
+    </sql>
+
+    <select id="countPage" parameterType="roleQuery" resultType="int">
+        select count(*) from sys_role <include refid="whereSql"/>
+    </select>
+
+    <select id="listPage" parameterType="roleQuery" resultType="role">
+        select * from sys_role <include refid="whereSql"/>
+        order by name asc limit #{limit} offset #{offset}
+    </select>
+
+</mapper>

@@ -70,6 +70,12 @@ public class Menu {
      */
     private Date updateTime;
 
+    /**
+     * 父名称
+     */
+    @TableField(exist = false)
+    private String parentName;
+
     @TableField(exist = false)
     private List<Menu> children = new ArrayList<>();
 
@@ -159,6 +165,14 @@ public class Menu {
 
     public void setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
+    }
+
+    public String getParentName() {
+        return parentName;
+    }
+
+    public void setParentName(String parentName) {
+        this.parentName = parentName;
     }
 
     public List<Menu> getChildren() {

@@ -17,7 +17,7 @@ import java.util.Set;
 
 /**
  * @author wusq
- * @date 2020/9/2
+ * @date 2020/9/3
  */
 @Api(description = "菜单")
 @RestController
@@ -28,9 +28,9 @@ public class MenuController {
     private MenuService service;
 
     @ApiOperation("查询菜单树")
-    @GetMapping("navTree")
-    public List<Menu> navTree(@RequestParam String username) {
-        return service.navTree(username);
+    @GetMapping("tree")
+    public List<Menu> tree(@RequestParam(required = false) String username, @RequestParam Boolean button) {
+        return service.tree(username, button);
     }
 
     @ApiOperation("查询用户权限")
